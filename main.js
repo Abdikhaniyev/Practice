@@ -53,3 +53,52 @@ org.forEach(obj => {
   percent__d.appendChild(percent);
 
 })
+
+const widget4 = document.getElementById('widget4');
+let events__d = [
+  {"title": "ONPZ", "value": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci molestiae et eum aliquam beatae aliquid laudantium iste vero neque delectus fugit ullam perferendis explicabo accusantium.</p>", "date": "19.05.2019"},
+  {"title": "ONPZ", "value": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis doloremque veniam laudantium at, provident, maxime molestias possimus debitis inventore itaque.</p>", "date": "20.05.2019"},
+  {"title": "MNPZ", "value": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sunt sit deserunt, obcaecati enim odio.</p>", "date": "21.05.2019"},
+  {"title": "MNPZ", "value": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veniam soluta est et doloribus. Ipsum dolorum officia ipsa rerum sunt!</p>", "date": "22.05.2019"},
+  {"title": "YANOS", "value": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, sit. Est deserunt obcaecati, esse neque!</p>", "date": "23.05.2019"}
+];
+
+events__d.forEach(obj =>{
+  let events = document.createElement('div');
+  events.className = 'events';
+  let events__head = document.createElement('div');
+  events__head.className = 'events__head';
+  let events__title = document.createElement('div');
+  events__title.className = 'events__title';
+  let events__logo = document.createElement('div');
+  events__logo.className = 'events__logo';
+  let events__body = document.createElement('div');
+  events__body.className = 'events__body';
+  let events__date = document.createElement('div');
+  events__date.className = 'events__date';
+
+  events__title.innerHTML = obj.title;
+  events__logo.innerHTML = '<i class="fas fa-city"></i><br>ER';
+  events__body.innerHTML = obj.value;
+  events__date.innerHTML = obj.date;
+
+  if (obj.title == 'ONPZ'){
+    events__title.style.background = '#2279d8';
+    events__head.style.borderLeft = '2px solid #2279d8';
+  }
+  if (obj.title == 'MNPZ'){
+    events__title.style.background = '#03a6a6';
+    events__head.style.borderLeft = '2px solid #03a6a6';
+  }
+  if (obj.title == 'YANOS'){
+    events__title.style.background = '#763fc1';
+    events__head.style.borderLeft = '2px solid #763fc1';
+  }
+
+  widget4.appendChild(events);
+  events.appendChild(events__head);
+  events__head.appendChild(events__title);
+  events__head.appendChild(events__logo);
+  events.appendChild(events__body);
+  events.appendChild(events__date);
+})

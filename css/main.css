@@ -212,7 +212,7 @@ table td {
   margin: 10px 20px;
 }
 
-.events__head__1, .events__head__2, .events__head__3 {
+.events__head {
   width: 65px;
   height: 75px;
   margin-right: 5px;
@@ -221,9 +221,9 @@ table td {
   border-top-left-radius: 15px;
 }
 
-.events__head__1 {
+/* .events__head {
   border-left: 2px solid #2279d8;
-}
+} */
 
 .events__head__2 {
   border-left: 2px solid #03a6a6;
@@ -237,24 +237,12 @@ table td {
   font-size: 18px;
 }
 
-.events__title__1, .events__title__2, .events__title__3 {
+.events__title {
   width: 100%;
   height: 20px;
   margin-bottom: 10px;
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
-}
-
-.events__title__1 {
-  background: #2279d8;
-}
-
-.events__title__2 {
-  background: #03a6a6;
-}
-
-.events__title__3 {
-  background: #763fc1;
 }
 
 .events__body {
