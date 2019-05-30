@@ -155,17 +155,17 @@ body {
   top: 32.9%;
 }
 
-#table {
+table {
   padding: 15px 70px;
   text-align: center;
 }
 
-#table th {
+table th {
   width: 100px;
   height: 60px;
 }
 
-#table td {
+table td {
   width: 100px;
   height: 100px;
   background: #272a39;
@@ -281,7 +281,7 @@ body {
   cursor: pointer;
 }
 
-/* .title__org {
+.title__org {
   width: 95%;
   height: 40px;
   display: flex;
@@ -334,45 +334,10 @@ body {
   border-left: 4px solid #21222d;
   text-align: center;
   color: lime;
-} */
+}
 
-.percent {
+.percent__d .percent {
   height: 20px;
   background: -webkit-linear-gradient(left, #9c4600, #ff9634 90%, #af560a 100%);
   margin: 10px 0;
-}
-
-#table__2 {
-  padding: 0 20px;
-  border: 4px solid #21222d;
-  width: 100%;
-  height: 430px;
-}
-
-#table__2 #title__org {
-  text-align: center;
-  font-size: 18px;
-  background: #272a39;
-}
-
-#table__2 #name__org {
-  width: 30%;
-  height: 40px;
-  font-size: 18px;
-}
-
-#table__2 #percent__d {
-  width: 55%;
-  height: 40px;
-}
-
-#table__2 #percent__n {
-  width: 15%;
-  height: 40px;
-  text-align: center;
-}
-
-#table__2 td {
-  background: #272a39;
-  padding: 0 10px;
 }
