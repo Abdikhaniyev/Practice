@@ -6,8 +6,6 @@ var objects = [
   sum = [],
   table = document.getElementById("table");
 
-
-
 for (var i = 1; i < 4; i++) {
   for (var j = 0; j < 7; j++) {
     table.rows[i].cells[j].innerHTML = objects[i-1][j];
