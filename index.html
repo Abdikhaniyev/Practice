@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <title>Task</title>
+</head>
+<body>
+  <div class="container">
+
+      <div class="widget">
+        <div class="widget__header">
+          <div class="num">A1</div>
+          <div class="title">NPZ</div>
+          <div class="date">DATE</div>
+        </div>
+        <div class="widget__body">
+          <div class="object__1">
+            <div class="object__1__value">
+              <div class="value__line"></div>
+              <div class="second__value__1">991</div>
+              <div class="first__value__1">3426</div>
+            </div>
+            <div class="objects__name">ONPZ</div>
+          </div>
+          <div class="object__2">
+            <div class="object__2__value">
+              <div class="value__line"></div>
+              <div class="second__value__2">464</div>
+              <div class="first__value__2">1147</div>
+            </div>
+            <div class="objects__name">MNPZ</div>
+          </div>
+          <div class="object__3">
+            <div class="object__3__value">
+              <div class="value__line"></div>
+              <div class="second__value__3">272</div>
+              <div class="first__value__3">988</div>
+            </div>
+            <div class="objects__name">YANOS</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="widget">
+        <div class="widget__header">
+          <div class="num">A2</div>
+          <div class="title">Statistics</div>
+          <div class="date">DATE</div>
+        </div>
+        <div class="widget__body">
+          <table id="table">
+            <tr>
+              <th>Share all events</th>
+              <th>All events<br><i class="far fa-clock"></i> </th>
+              <th><font color="red">Critical<br><i class="fas fa-exclamation-triangle"></i> </font></th>
+              <th><font color="orange">Significant<br><i class="fas fa-exclamation-triangle"></i> </font></th>
+              <th><font color="red">With repetitions<br><i class="fas fa-redo"></i> </font></th>
+              <th><font color="green">Completed<br><i class="far fa-check-circle"></i> </font></th>
+              <th>Events <br> from ER<br><i class="far fa-check-circle"></i> </th>
+            </tr>
+            <tr>
+              <td class="row__1"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="row__2"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="row__3"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+
+          <!-- <script>
+          var objects = [
+            ['50%', 73, 0, 16, 0, 68, 5],
+            ['22%', 32, 0,  4, 0, 25, 7],
+            ['28%', 41, 0,  6, 0, 41, 0]
+          ],
+            sum = [],
+            table = document.getElementById("table");
+
+          for (var i = 1; i < 4; i++) {
+            for (var j = 0; j < 7; j++) {
+              table.rows[i].cells[j].innerHTML = objects[i-1][j];
+            }
+          }
+
+          for (var i = 1; i < 7; i++){
+            sum[i] = objects[0][i] + objects[1][i] + objects[2][i];
+            table.rows[0].cells[i].insertAdjacentHTML('beforeend', sum[i]);
+          }
+          </script> -->
+        </div>
+      </div>
+
+      <div class="widget">
+        <div class="widget__header">
+          <div class="num">A3</div>
+          <div class="title">Coefficient</div>
+          <div class="date">DATE</div>
+        </div>
+        <div class="widget__body__2">
+          <!-- <div class="title__org">
+            <div class="title__name__org">Subsidiaries</div>
+            <div class="title__percent">% KTG</div>
+          </div>
+          <div class="organizations">
+            <div class="name__org">Shagol</div>
+            <div class="percent__d">
+              <div class="percent"></div>
+            </div>
+            <div class="percent__n">100%</div>
+          </div>
+          <div class="organizations">
+            <div class="name__org">Taganrog</div>
+            <div class="percent__d">
+              <div class="percent"></div>
+            </div>
+            <div class="percent__n">100%</div>
+          </div>
+          <div class="organizations">
+            <div class="name__org">Pskov</div>
+            <div class="percent__d">
+              <div class="percent" style="width: 98.85%;"></div>
+            </div>
+            <div class="percent__n">99.85%</div>
+          </div>
+          <div class="organizations">
+            <div class="name__org">Orenburg</div>
+            <div class="percent__d">
+              <div class="percent" style="width: 98.87%;"></div>
+            </div>
+            <div class="percent__n">99,87%</div>
+          </div>
+          <div class="organizations">
+            <div class="name__org">Sheremetyevo</div>
+            <div class="percent__d">
+              <div class="percent" style="width: 98.62%;"></div>
+            </div>
+            <div class="percent__n">99.62%</div>
+          </div>
+          <div class="organizations">
+            <div class="name__org">Engels</div>
+            <div class="percent__d">
+              <div class="percent" style="width: 96.43%;"></div>
+            </div>
+            <div class="percent__n">97.43%</div>
+          </div>
+          <div class="organizations">
+            <div class="name__org">Novosibirsk</div>
+            <div class="percent__d">
+              <div class="percent" style="width: 98.81%;"></div>
+            </div>
+            <div class="percent__n">99.81%</div>
+          </div> -->
+
+          <table id="table__2">
+            <tr id="title__org">
+              <th id="name__org">Subsidiaries</th>
+              <th id="percent__d"></th>
+              <th id="percent__n">% KTG</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td><div class="percent"></div></td>
+              <td id="percent__n">%</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><div class="percent"></div></td>
+              <td id="percent__n">%</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><div class="percent"></div></td>
+              <td id="percent__n">%</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><div class="percent"></div></td>
+              <td id="percent__n">%</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><div class="percent"></div></td>
+              <td id="percent__n">%</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><div class="percent"></div></td>
+              <td id="percent__n">%</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><div class="percent"></div></td>
+              <td id="percent__n">%</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="widget">
+        <div class="widget__header">
+          <div class="num">A4</div>
+          <div class="title">Event Ribbon</div>
+          <div class="date">DATE</div>
+        </div>
+        <div class="widget__body__2">
+          <div class="events">
+            <div class="events__head__1">
+              <div class="events__title__1">ONPZ</div>
+              <div class="events__logo"><i class="fas fa-city"></i><br>ER</div>
+            </div>
+            <div class="events__body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci molestiae et eum aliquam beatae aliquid laudantium iste vero neque delectus fugit ullam perferendis explicabo accusantium.</p>
+            </div>
+            <div class="events__date">DATE</div>
+          </div>
+          <div class="events">
+            <div class="events__head__1">
+              <div class="events__title__1">ONPZ</div>
+              <div class="events__logo"><i class="fas fa-city"></i><br>ER</div>
+            </div>
+            <div class="events__body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis doloremque veniam laudantium at, provident, maxime molestias possimus debitis inventore itaque.</p>
+            </div>
+            <div class="events__date">DATE</div>
+          </div>
+          <div class="events">
+            <div class="events__head__2">
+              <div class="events__title__2">MNPZ</div>
+              <div class="events__logo"><i class="fas fa-city"></i><br>ER</div>
+            </div>
+            <div class="events__body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sunt sit deserunt, obcaecati enim odio.</p>
+            </div>
+            <div class="events__date">DATE</div>
+          </div>
+          <div class="events">
+            <div class="events__head__2">
+              <div class="events__title__2">MNPZ</div>
+              <div class="events__logo"><i class="fas fa-city"></i><br>ER</div>
+            </div>
+            <div class="events__body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veniam soluta est et doloribus. Ipsum dolorum officia ipsa rerum sunt!</p>
+            </div>
+            <div class="events__date">DATE</div>
+          </div>
+          <div class="events">
+            <div class="events__head__3">
+              <div class="events__title__3">YANOS</div>
+              <div class="events__logo"><i class="fas fa-city"></i><br>ER</div>
+            </div>
+            <div class="events__body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, sit. Est deserunt obcaecati, esse neque!</p>
+            </div>
+            <div class="events__date">DATE</div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
