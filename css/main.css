@@ -78,6 +78,14 @@ body {
   border-bottom: 3px dotted rgba(255, 255, 255, .5);
 }
 
+.total__value {
+  position: absolute;
+  margin: 10px 20px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 800;
+}
+
 .first__value, .second__value {
   position: relative;
   width: 65px;

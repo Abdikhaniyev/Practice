@@ -1,9 +1,9 @@
 //widget 1
 const widget1 = document.getElementById('widget1');
 let objectsW1 = [
-  {'title': 'ONPZ',  'firstValue': '3426', 'secondValue': '-991'},
-  {'title': 'MNPZ',  'firstValue': '1147', 'secondValue': '464'},
-  {'title': 'YANOS', 'firstValue':  '988', 'secondValue': '272'}
+  {'title': 'ONPZ',  'firstValue': 3426, 'secondValue': -991},
+  {'title': 'MNPZ',  'firstValue': 1147, 'secondValue': 464},
+  {'title': 'YANOS', 'firstValue':  988, 'secondValue': 272}
 ];
 
 objectsW1.forEach(obj => {
@@ -19,6 +19,8 @@ objectsW1.forEach(obj => {
   secondValue.className = 'second__value';
   let objectName = document.createElement('div');
   objectName.className = 'object__name';
+  let totalValue = document.createElement('div');
+  totalValue.className = 'total__value';
 
   if (obj.title == 'ONPZ') {
     objectValue.style.background = '-webkit-linear-gradient(90deg, #1f324a, #1a1e2b)';
@@ -52,6 +54,8 @@ objectsW1.forEach(obj => {
   firstValue.innerHTML = obj.firstValue;
   secondValue.innerHTML = obj.secondValue;
   objectName.innerHTML = obj.title;
+  totalValue.innerHTML = 'Total:';
+  totalValue.insertAdjacentHTML('beforeend', obj.firstValue + obj.secondValue);
 
   if (obj.title == 'ONPZ') {
     objectName.style.borderTop = '4px solid #2279d8';
@@ -67,6 +71,7 @@ objectsW1.forEach(obj => {
   objectD.appendChild(objectValue);
   objectD.appendChild(objectName);
   objectD.appendChild(zeroLine);
+  objectValue.appendChild(totalValue);
   objectValue.appendChild(firstValue);
   objectValue.appendChild(secondValue);
 })
