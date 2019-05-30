@@ -54,105 +54,38 @@ body {
   background: #21222d;
 }
 
-.object__1, .object__2, .object__3 {
+.objects__W1 {
   width: 30%;
-  padding-left: 22px;
-  margin-top: 15px;
+  margin: 10px 20px;
 }
 
-.object__1__value, .object__2__value, .object__3__value {
-  height: 375px;
+.object__value {
+  height: 374px;
+  display: flex;
+  flex-direction: row;
 }
 
-.object__1__value {
-  background: -webkit-linear-gradient(90deg, #1f324a, #1a1e2b);
-}
-
-.object__2__value {
-  background: -webkit-linear-gradient(90deg, #1a3943, #1a1e2b);
-}
-
-.object__3__value {
-  background: -webkit-linear-gradient(90deg, #4b3077, #1a1e2b);
-}
-
-.objects__name {
+.object__name {
+  height: 35px;
+  line-height: 35px;
   text-align: center;
-  padding: 5px;
   background: #272a39;
 }
 
-.object__1 .objects__name {
-  border-top: 4px solid #2279d8;
-}
-
-.object__2 .objects__name {
-  border-top: 4px solid #03a6a6;
-}
-
-.object__3 .objects__name {
-  border-top: 4px solid #763fc1;
-}
-
-.value__line {
+.zero__line {
   position: relative;
-  top: 51%;
+  bottom: 222px;
   border-bottom: 3px dotted rgba(255, 255, 255, .5);
 }
 
-.first__value__1, .first__value__2, .first__value__3,
-.second__value__1, .second__value__2, .second__value__3 {
+.first__value, .second__value {
   position: relative;
-  width: 70px;
+  width: 65px;
   text-align: center;
   line-height: 0px;
-}
-
-.first__value__1, .first__value__2, .first__value__3 {
   left: 25%;
-}
-
-.second__value__1, .second__value__2, .second__value__3 {
-  left: 50%;
-}
-
-.first__value__1 {
-  height: 130px;
-  background: #2279d8;
-  top: 5%;
-}
-
-.second__value__1 {
-  height: 40px;
-  background: #2279d8;
-  opacity: .6;
-  top: 5%;
-}
-
-.first__value__2 {
-  height: 45px;
-  background: #03a6a6;
-  top: 31.3%;
-}
-
-.second__value__2 {
-  height: 27px;
-  background: #03a6a6;
-  opacity: .6;
-  top: 31.3%;
-}
-
-.first__value__3 {
-  height: 43px;
-  background: #763fc1;
-  top: 32.9%;
-}
-
-.second__value__3 {
-  height: 23px;
-  opacity: .6;
-  background: #763fc1;
-  top: 32.9%;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 table {
@@ -219,18 +152,6 @@ table td {
   background: #272a39;
   text-align: center;
   border-top-left-radius: 15px;
-}
-
-/* .events__head {
-  border-left: 2px solid #2279d8;
-} */
-
-.events__head__2 {
-  border-left: 2px solid #03a6a6;
-}
-
-.events__head__3 {
-  border-left: 2px solid #763fc1;
 }
 
 .fa-city {
