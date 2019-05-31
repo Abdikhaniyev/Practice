@@ -1,9 +1,20 @@
 //widget 1
 const widget1 = document.getElementById('widget1');
-let objectsW1 = [
-  {'title': 'ONPZ',  'firstValue': 3426, 'secondValue': -991},
-  {'title': 'MNPZ',  'firstValue': 1147, 'secondValue': 464},
-  {'title': 'YANOS', 'firstValue':  988, 'secondValue': 272}
+let objectsW1 = [{
+    'title': 'ONPZ',
+    'firstValue': 3426,
+    'secondValue': -991
+  },
+  {
+    'title': 'MNPZ',
+    'firstValue': 1147,
+    'secondValue': 464
+  },
+  {
+    'title': 'YANOS',
+    'firstValue': 988,
+    'secondValue': 272
+  }
 ];
 
 objectsW1.forEach(obj => {
@@ -23,32 +34,33 @@ objectsW1.forEach(obj => {
   totalValue.className = 'total__value';
 
   if (obj.title == 'ONPZ') {
-    objectValue.style.background = '-webkit-linear-gradient(90deg, #1f324a, #1a1e2b)';
+    objectValue.style.background = '-webkit-linear-gradient(90deg, rgb(31, 50, 74), rgba(31, 50, 74, 0))';
     firstValue.style.background = '#2279d8';
     secondValue.style.background = 'rgba(34, 121, 216, .5)';
   }
   if (obj.title == 'MNPZ') {
-    objectValue.style.background = '-webkit-linear-gradient(90deg, #1a3943, #1a1e2b)';
+    objectValue.style.background = '-webkit-linear-gradient(90deg, rgb(26, 57, 67), rgba(26, 57, 67, 0))';
     firstValue.style.background = '#03a6a6';
     secondValue.style.background = 'rgba(3, 166, 166, .5)';
   }
   if (obj.title == 'YANOS') {
-    objectValue.style.background = '-webkit-linear-gradient(90deg, #4b3077, #1a1e2b)';
+    objectValue.style.background = '-webkit-linear-gradient(90deg, rgb(75, 48, 119), rgba(75, 48, 119, 0))';
     firstValue.style.background = '#763fc1';
     secondValue.style.background = 'rgba(118, 63, 193, .5)';
   }
 
   if (obj.firstValue > 0) {
-    firstValue.style.top = 191 - obj.firstValue/25 +'px';
-    firstValue.style.height = obj.firstValue/25 +'px';
+    firstValue.style.top = 191 - obj.firstValue / 25 + 'px';
+    firstValue.style.height = obj.firstValue / 25 + 'px';
   }
   if (obj.secondValue > 0) {
-    secondValue.style.top = 191 - obj.firstValue/25 - obj.secondValue/25 + 'px';
-    secondValue.style.height = obj.secondValue/25 + 'px';
+    secondValue.style.top = 191 - obj.firstValue / 25 - obj.secondValue / 25 + 'px';
+    secondValue.style.height = obj.secondValue / 25 + 'px';
   }
   if (obj.secondValue < 0) {
     secondValue.style.top = 191 + 'px';
-    secondValue.style.height = obj.secondValue/25 * (-1) + 'px';
+    secondValue.style.height = obj.secondValue / 25 * (-1) + 'px';
+    secondValue.style.lineHeight = obj.secondValue / 25 * (-2) + 'px';
   }
 
   firstValue.innerHTML = obj.firstValue;
@@ -79,20 +91,20 @@ objectsW1.forEach(obj => {
 
 // widget 2
 let objectsW2 = [
-  ['50%', 73, 0, 16, 0, 68, 5],
-  ['22%', 32, 0,  4, 0, 25, 7],
-  ['28%', 41, 0,  6, 0, 41, 0]
-],
+    ['50%', 73, 0, 16, 0, 68, 5],
+    ['22%', 32, 0, 4, 0, 25, 7],
+    ['28%', 41, 0, 6, 0, 41, 0]
+  ],
   sum = [],
   table = document.getElementById("table");
 
 for (var i = 1; i < 4; i++) {
   for (var j = 0; j < 7; j++) {
-    table.rows[i].cells[j].innerHTML = objectsW2[i-1][j];
+    table.rows[i].cells[j].innerHTML = objectsW2[i - 1][j];
   }
 }
 
-for (var i = 1; i < 7; i++){
+for (var i = 1; i < 7; i++) {
   sum[i] = objectsW2[0][i] + objectsW2[1][i] + objectsW2[2][i];
   table.rows[0].cells[i].insertAdjacentHTML('beforeend', sum[i]);
 }
@@ -100,14 +112,34 @@ for (var i = 1; i < 7; i++){
 
 // widget 3
 const widget3 = document.getElementById('widget3');
-let objectsW3 = [
-  {"title": "Shagol", "value": "100%"},
-  {"title": "Taganrog", "value": "100%"},
-  {"title": "Pskov", "value": "99.85%"},
-  {"title": "Orenburg", "value": "99.87%"},
-  {"title": "Sheremetyevo", "value": "99.62%"},
-  {"title": "Engels", "value": "97.43%"},
-  {"title": "Novosibirsk", "value": "99.81%"}
+let objectsW3 = [{
+    "title": "Shagol",
+    "value": "100%"
+  },
+  {
+    "title": "Taganrog",
+    "value": "100%"
+  },
+  {
+    "title": "Pskov",
+    "value": "99.85%"
+  },
+  {
+    "title": "Orenburg",
+    "value": "99.87%"
+  },
+  {
+    "title": "Sheremetyevo",
+    "value": "99.62%"
+  },
+  {
+    "title": "Engels",
+    "value": "97.43%"
+  },
+  {
+    "title": "Novosibirsk",
+    "value": "99.81%"
+  }
 ];
 
 objectsW3.forEach(obj => {
@@ -138,51 +170,107 @@ objectsW3.forEach(obj => {
 // widget 4
 
 const widget4 = document.getElementById('widget4');
-let eventsD = [
-  {"title": "ONPZ", "value": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci molestiae et eum aliquam beatae aliquid laudantium iste vero neque delectus fugit ullam perferendis explicabo accusantium.</p>", "date": "19.05.2019"},
-  {"title": "ONPZ", "value": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis doloremque veniam laudantium at, provident, maxime molestias possimus debitis inventore itaque.</p>", "date": "20.05.2019"},
-  {"title": "MNPZ", "value": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sunt sit deserunt, obcaecati enim odio.</p>", "date": "21.05.2019"},
-  {"title": "MNPZ", "value": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veniam soluta est et doloribus. Ipsum dolorum officia ipsa rerum sunt!</p>", "date": "22.05.2019"},
-  {"title": "YANOS", "value": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, sit. Est deserunt obcaecati, esse neque!</p>", "date": "23.05.2019"}
+let eventsD = [{
+    "title": "ONPZ",
+    "shortValue": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci molestiae et eum aliquam beatae.",
+    "longValue": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.",
+    "date": "19.05.2019"
+  },
+  {
+    "title": "ONPZ",
+    "shortValue": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis doloremque veniam laudantium at, provident.",
+    "longValue": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.",
+    "date": "20.05.2019"
+  },
+  {
+    "title": "MNPZ",
+    "shortValue": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sunt sit deserunt, obcaecati enim odio.",
+    "longValue": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.",
+    "date": "21.05.2019"
+  },
+  {
+    "title": "MNPZ",
+    "shortValue": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci veniam soluta est et doloribus. Ipsum dolorum officia ipsa rerum sunt!",
+    "longValue": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.",
+    "date": "22.05.2019"
+  },
+  {
+    "title": "YANOS",
+    "shortValue": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, sit. Est deserunt obcaecati, esse neque!",
+    "longValue": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ex dolores, incidunt necessitatibus perspiciatis vero sit cupiditate rem possimus facere. Repellendus non cumque tenetur cupiditate, veritatis, nulla nihil sunt necessitatibus blanditiis dolorem velit fuga eum fugit porro. Eum, adipisci asperiores.",
+    "date": "23.05.2019"
+  }
 ];
 
-eventsD.forEach(obj =>{
+eventsD.forEach(obj => {
   let events = document.createElement('div');
   events.className = 'events';
+  events.id = 'short__value';
   let eventsHead = document.createElement('div');
   eventsHead.className = 'events__head';
   let eventsTitle = document.createElement('div');
   eventsTitle.className = 'events__title';
   let eventsLogo = document.createElement('div');
   eventsLogo.className = 'events__logo';
-  let eventsBody = document.createElement('div');
-  eventsBody.className = 'events__body';
+  let shortValue = document.createElement('div');
+  shortValue.className = 'events__body';
+  let modal = document.createElement('div');
+  modal.className = 'modal';
+  modal.id = 'modal';
+  let modalTitle = document.createElement('div');
+  modalTitle.className = 'modal__title';
+  let btnClose = document.createElement('span');
+  btnClose.className = 'close';
+  let longValue = document.createElement('div');
+  longValue.className = 'long__value';
   let eventsDate = document.createElement('div');
   eventsDate.className = 'events__date';
 
   eventsTitle.innerHTML = obj.title;
   eventsLogo.innerHTML = '<i class="fas fa-city"></i><br>ER';
-  eventsBody.innerHTML = obj.value;
+  shortValue.innerHTML = obj.shortValue;
+  modalTitle.insertAdjacentHTML('beforeend', obj.title);
+  longValue.insertAdjacentHTML('beforeend', obj.longValue);
+  longValue.insertAdjacentHTML('beforeend', '<br><br>' + obj.date);
+  btnClose.innerHTML = '&times;';
   eventsDate.innerHTML = obj.date;
 
-  if (obj.title == 'ONPZ'){
+  if (obj.title == 'ONPZ') {
     eventsTitle.style.background = '#2279d8';
     eventsHead.style.borderLeft = '2px solid #2279d8';
+    modal.style.borderLeft = '2px solid #2279d8';
+    modal.style.borderTop = '8px solid #2279d8';
   }
-  if (obj.title == 'MNPZ'){
+  if (obj.title == 'MNPZ') {
     eventsTitle.style.background = '#03a6a6';
     eventsHead.style.borderLeft = '2px solid #03a6a6';
+    modal.style.borderLeft = '2px solid #03a6a6';
+    modal.style.borderTop = '8px solid #03a6a6';
   }
-  if (obj.title == 'YANOS'){
+  if (obj.title == 'YANOS') {
     eventsTitle.style.background = '#763fc1';
     eventsHead.style.borderLeft = '2px solid #763fc1';
+    modal.style.borderLeft = '2px solid #763fc1';
+    modal.style.borderTop = '8px solid #763fc1';
   }
 
   widget4.appendChild(events);
+  widget4.appendChild(modal);
   events.appendChild(eventsHead);
+  events.appendChild(shortValue);
+  events.appendChild(eventsDate);
+  modal.appendChild(btnClose);
+  modal.appendChild(modalTitle);
+  modal.appendChild(longValue);
   eventsHead.appendChild(eventsTitle);
   eventsHead.appendChild(eventsLogo);
-  events.appendChild(eventsBody);
-  events.appendChild(eventsDate);
+
+  events.onclick = function() {
+    modal.style.display = 'block';
+  }
+
+  btnClose.onclick = function() {
+    modal.style.display = 'none';
+  }
 })
 // widget 4 end

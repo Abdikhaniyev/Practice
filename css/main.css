@@ -151,13 +151,13 @@ table td {
   height: 75px;
   display: flex;
   margin: 10px 20px;
+  background: #272a39;
 }
 
 .events__head {
   width: 65px;
   height: 75px;
-  margin-right: 5px;
-  background: #272a39;
+  border-right: 5px solid #21222d;
   text-align: center;
   border-top-left-radius: 15px;
 }
@@ -177,23 +177,23 @@ table td {
 .events__body {
   width: 85%;
   height: 75px;
-  background: #272a39;
   padding: 0 10px;
+  padding-top: 15px;
 }
 
 .events__date {
   width: 15%;
   height: 75px;
   float: right;
-  margin-left: 5px;
+  border-left: 5px solid #21222d;
   text-align: center;
-  background: #272a39;
   line-height: 75px;
   font-size: 12px;
 }
 
 .events:hover {
-  opacity: .6;
+  background: rgba(39, 42, 57, .6);
+  color: #e8e8e8;
   transition: .5s;
   cursor: pointer;
 }
@@ -257,4 +257,37 @@ table td {
   height: 20px;
   background: -webkit-linear-gradient(left, #9c4600, #ff9634 90%, #af560a 100%);
   margin: 10px 0;
+}
+
+.modal {
+  display: none;
+  background: #272a39;
+  z-index: 100;
+  overflow: auto;
+  position: absolute;
+  top: 55%;
+  left: 50.2%;
+  width: 46.5%;
+  height: 407px;
+  border-top-left-radius: 16px;
+  transition: .5s;
+}
+
+.modal__title {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.long__value {
+  margin: 15px 20px;
+}
+
+.close {
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+  z-index: 101;
+  margin: 10px 15px;
 }
