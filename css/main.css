@@ -285,7 +285,6 @@ table td {
 }
 
 .close {
-<<<<<<< HEAD
   position: absolute;
   left: 93%;
   font-size: 25px;
@@ -294,11 +293,4 @@ table td {
   padding: 0 8px;
   margin: 15px;
   cursor: pointer;
-=======
-  float: right;
-  font-size: 25px;
-  font-weight: bold;
-  z-index: 101;
-  margin: 10px 15px;
->>>>>>> a6871a017adf8476bec557678dfc1d1d175f9b37
 }
